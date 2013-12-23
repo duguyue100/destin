@@ -25,10 +25,8 @@ Changes and Update by Yuhuang Hu
 
 ### Plans
 
-* Update BeliefExporter.h for generating features more flexible
 * Testing classification result in larger dataset
-* Growing DeSTIN map with videos
-* Set up GitHub repo for ROS version
+* Growing DeSTIN map
 * Working with color images
 * Combine depth image channel (Optional)
 
