@@ -1,10 +1,10 @@
 #ifndef STEREOCAMERA_H
 #define STEREOCAMERA_H
 
-#include "cv.h"
-#include "cxmisc.h"
-#include "cvaux.h"
-#include "highgui.h"
+#include "opencv/cv.h"
+#include "opencv/cxmisc.h"
+#include "opencv/cvaux.h"
+#include "opencv/highgui.h"
 
 #define RESULT_OK   0
 #define RESULT_FAIL 1

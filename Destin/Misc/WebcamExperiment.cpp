@@ -41,8 +41,8 @@ void printFPS(bool print){
 
 int main(int argc, char ** argv){
 
-    //VideoSource vs(false, "./Various.avi");
-    VideoSource vs(true, "");
+    VideoSource vs(false, "./Various.avi");
+    //VideoSource vs(true, "");
 
     vs.enableDisplayWindow();
 
