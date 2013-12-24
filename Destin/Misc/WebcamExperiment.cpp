@@ -102,8 +102,8 @@ vector<cv::Mat> loadImage(vector<string> imageadr)
       cv::Mat image, buffer;
       string imagename=imageadr[i];
       buffer=imread(imagename.c_str(), CV_LOAD_IMAGE_COLOR);
-      cv::resize(buffer,buffer, Size(256,256),0,0,INTER_LINEAR);
-      
+      cv::resize(buffer, buffer, Size(256,256), 0, 0, INTER_LINEAR);
+
       if (!buffer.data)
         {
 	  cout << "error" << endl;

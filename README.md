@@ -30,6 +30,12 @@ Changes and Update by Yuhuang Hu
 * Update BeliefExporter.h for generating features more flexible [DONE]
 * Testing classification result in larger dataset [DONE]
 * Growing DeSTIN map with videos
+  1. Each scene is trained by fixed number of frames (frames are also saved).
+  2. Save DeSTIN and generate features.
+  3. Robot move and change scene.
+  4. The first frame of new scene will be feed to all saved DeSTINs and extract features.
+  5. Calcualte average distance based on saved features.
+  6. If the distances are larger than all DeSTINs, then create new DeSTIN, or enable the most similar DeSTIN and train again.
 * Set up GitHub repo for ROS version
 * Working with color images
 * Combine depth image channel (Optional)
