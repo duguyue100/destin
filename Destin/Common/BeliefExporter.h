@@ -4,7 +4,9 @@
 #include <vector>
 #include "DestinNetworkAlt.h"
 #include <stdexcept>
-
+#include <stdio.h>
+#include <string.h>
+#include <string>
 
 /** Returns a pointer to a subset of destin's beliefs
   */
@@ -46,7 +48,7 @@ public:
             outputSize += d->layerSize[layer] * d->nb[layer];
         }
 
-        deleteBeliefs();
+        //deleteBeliefs();
         beliefs = new float[outputSize];
     }
 
@@ -79,8 +81,20 @@ public:
         return beliefs;
     }
 
-    void openMatFile(string matfile){
+    void createMatFile(){
+	FILE *filePtr;
+	//FILE *filePtr1;
 
+	filePtr=fopen("OutPutBeliefs.txt","w");
+	//filePtr1=fopen("combinedBGR.txt","w");
+
+	fclose(filePtr);
+	//fclose(filePtr1);
+
+	//filePtr=fopen("OutPutBeliefs.txt","w");
+	//fclose(filePtr);
+	
+	
     }
 
     void closeMatFile(){
@@ -98,8 +112,21 @@ public:
      * @param label - used to identify what type of input image was given to Destin that
      * led to the current output beliefs.
      */
-    void writeBeliefToMat(int label){
+    void writeBeliefToMat(string filename){
+	float *label=getBeliefs();	   	
+	int i = 0;
+   	FILE *filePtr;
+ 	
+   	filePtr = fopen(filename.c_str(),"a+");
+ 	
+   	//for (i = 0; i < ( int(sizeof(*label)/sizeof(label[0]))); i++)
+	uint size=getOutputSize();
+	for (i = 0; i < size; i++)	
+		fprintf(filePtr, "%.9f\t", label[i]);
 
+		fprintf(filePtr, "\n");
+		fclose(filePtr);
+	
     }
 
 protected:
