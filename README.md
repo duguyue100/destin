@@ -22,11 +22,13 @@ Changes and Update by Yuhuang Hu
 ### Changes and updates
 
 * Since it's working with ROS, some of the source files are updated to work with OpenCV in ROS
+* Some tools for generating image labels are uploaded
+* A 33 classes classification code and result are uploaded.
 
 ### Plans
 
-* Update BeliefExporter.h for generating features more flexible
-* Testing classification result in larger dataset
+* Update BeliefExporter.h for generating features more flexible [DONE]
+* Testing classification result in larger dataset [DONE]
 * Growing DeSTIN map with videos
 * Set up GitHub repo for ROS version
 * Working with color images
